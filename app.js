@@ -4,6 +4,7 @@ const mongoose = require('./database/mongoose');
 
 const TaskList = require('./database/models/taskList');
 const Task = require('./database/models/task');
+const port = process.env.PORT || 3000;
 
 /*
 CORS - Cross Origin Request Security
@@ -178,6 +179,6 @@ app.delete('/tasklists/:tasklistId/tasks/:taskId', (req, res) => {
     console.log("Server started on port 3000");
 });*/
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log("Server started on port 3000");
 });
